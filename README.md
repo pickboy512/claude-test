@@ -2,16 +2,16 @@
 
 ## 3D Snake
 
-A simple 3D Snake game written in C++ with OpenGL/GLUT. The snake and food
-are rendered as shaded cubes/sphere on a grid, viewed from a fixed
-perspective camera.
+A simple 3D Snake game written in C++ with [raylib](https://www.raylib.com/).
+The snake and food are rendered as cubes/a sphere on a grid, viewed from a
+fixed perspective camera.
 
-### Build (Linux)
+### Build (macOS, incl. Apple Silicon)
 
-Install dependencies (Debian/Ubuntu):
+Install dependencies:
 
 ```
-sudo apt-get install build-essential cmake freeglut3-dev libglu1-mesa-dev
+brew install cmake raylib
 ```
 
 Build:
@@ -25,6 +25,18 @@ make
 Run:
 
 ```
+./snake3d
+```
+
+### Build (Linux)
+
+Install raylib per the [raylib wiki](https://github.com/raysan5/raylib/wiki)
+for your distro (or build it from source), then build the same way as above:
+
+```
+mkdir -p build && cd build
+cmake ..
+make
 ./snake3d
 ```
 
